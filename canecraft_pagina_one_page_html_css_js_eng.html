@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CANECRAFT Vodka — Gluten Free</title>
+  <meta name="description" content="Canecraft: gluten‑free premium vodka distilled from sugarcane in the Dominican Republic. Sustainable methods, natural ingredients, elegant finish." />
+  <meta property="og:title" content="CANECRAFT Vodka — Gluten Free" />
+  <meta property="og:description" content="Gluten‑free premium vodka, distilled four times in the Dominican Republic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#1f5c2e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-green:#1f5c2e; /* label green */
+      --brand-green-2:#184a25;
+      --brand-gold:#d3c28d; /* warm gold */
+      --cream:#f7f3e9; /* label cream */
+      --ink:#0c1b11; /* near black */
+      --muted:#5f6f64;
+      --shadow:0 10px 30px rgba(0,0,0,.14);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); background:linear-gradient(180deg,#fcfbf7 0%, #fbfaf5 35%, #f4f0e4 100%);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+    header{
+      position:sticky; top:0; z-index:40; backdrop-filter:saturate(1.2) blur(8px);
+      background:color-mix(in hsl, var(--cream) 90%, white);
+      border-bottom:1px solid color-mix(in hsl, var(--brand-green) 20%, transparent);
+    }
+    .container{width:min(1100px, 92vw); margin-inline:auto}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px; color:var(--brand-green)}
+    .brand .word{font-family:"Cormorant Garamond", Garamond, "Times New Roman", serif; letter-spacing:1px; font-weight:700; font-size:26px}
+    .badge{border:2px solid var(--brand-green); padding:3px 8px; border-radius:999px; font-size:12px; color:var(--brand-green); background:linear-gradient(180deg, #fff 0%, #f9f6ec 100%)}
+
+    .btn{appearance:none; border:none; cursor:pointer; border-radius:999px; padding:12px 18px; font-weight:600}
+    .btn-primary{background:var(--brand-green); color:var(--cream); box-shadow:var(--shadow)}
+    .btn-primary:hover{background:var(--brand-green-2)}
+    .btn-ghost{background:transparent; color:var(--brand-green); border:1px solid color-mix(in hsl, var(--brand-green) 30%, transparent)}
+
+    .hero{position:relative; isolation:isolate; padding:84px 0 72px; overflow:hidden}
+    .hero::before{
+      content:""; position:absolute; inset:-20% -10% auto -10%; height:120%; z-index:-1;
+      background:
+        radial-gradient(1200px 600px at 80% 20%, rgba(31,92,46,.09), transparent 60%),
+        linear-gradient(180deg, #f4efe0 0%, #fbf8ee 35%, #ffffff 100%),
+        url('') center/cover no-repeat; /* replace with photo if needed */
+    }
+    .hero .inner{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center}
+    .card{background:linear-gradient(180deg, #fff 0%, #faf7ee 100%); border:1px solid color-mix(in hsl, var(--brand-gold) 55%, transparent); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px}
+    .eyebrow{font-size:13px; letter-spacing:.14em; color:var(--muted); text-transform:uppercase}
+    h1,h2,h3{font-family:"Cormorant Garamond", Garamond, "Times New Roman", serif; line-height:1.2; color:var(--brand-green)}
+    h1{font-size:clamp(34px, 4.8vw, 56px); margin:8px 0 10px}
+    h2{font-size:clamp(26px, 3.2vw, 36px); margin:0 0 10px}
+    p{margin:0 0 16px}
+
+    .tags{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 22px}
+    .tag{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid color-mix(in hsl, var(--brand-green) 30%, transparent); background:linear-gradient(180deg, #fff 0%, #f7f3e9 100%); color:var(--ink); font-weight:600}
+    .tag svg{color:var(--brand-green)}
+
+    .seal{display:inline-flex; align-items:center; gap:8px; color:var(--brand-gold); font-weight:700; text-transform:uppercase; letter-spacing:.08em}
+
+    .bottle{
+      width:min(540px, 90%); justify-self:center; filter:drop-shadow(0 30px 40px rgba(0,0,0,.2));
+    }
+
+    section{padding:64px 0}
+    .grid{display:grid; gap:22px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+    @media (max-width: 900px){
+      .hero .inner{grid-template-columns:1fr}
+      .grid.cols-3, .grid.cols-2{grid-template-columns:1fr}
+      nav{padding-inline:4px}
+    }
+
+    .feature{background:#fff; border:1px solid color-mix(in hsl, var(--brand-gold) 45%, transparent); border-radius:var(--radius); padding:20px 18px}
+    .feature h3{margin:0 0 6px; font-size:22px}
+
+    .panel{background:linear-gradient(180deg, #fff 0%, #fbf8ef 100%); border:1px solid color-mix(in hsl, var(--brand-gold) 40%, transparent); border-radius:var(--radius); padding:24px}
+
+    .stamp{display:inline-block; padding:8px 10px; border:2px solid var(--brand-green); color:var(--brand-green); border-radius:10px; font-family:"Cormorant Garamond", serif; font-weight:700; letter-spacing:.04em; background:linear-gradient(180deg, #fff 0%, #f7f2e5 100%)}
+
+    footer{background:var(--brand-green); color:var(--cream); padding:36px 0}
+    footer a{color:var(--brand-gold)}
+
+    /* tiny cane motif */
+    .motif{position:absolute; inset:auto -60px -60px auto; width:220px; opacity:.08}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand" aria-label="CANECRAFT">
+          <svg width="34" height="34" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" stroke="var(--brand-green)" stroke-width="4" fill="transparent"/>
+            <path d="M68 25c-9 0-15 6-18 12-3-6-9-12-18-12 9 9 9 41 36 50-16-12-18-32 0-50Z" fill="var(--brand-green)"/>
+          </svg>
+          <span class="word">CANECRAFT</span>
+          <span class="badge" title="Gluten free">GLUTEN FREE</span>
+        </div>
+        <div style="display:flex; gap:10px">
+          <a class="btn btn-ghost" href="#historia">Story</a>
+          <a class="btn btn-ghost" href="#origen">Origin</a>
+          <a class="btn btn-primary" href="#comprar">Where to buy</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container inner">
+        <div class="card">
+          <div class="eyebrow">Dominican sugarcane vodka</div>
+          <h1>Elegance in every sip</h1>
+          <p>Canecraft is a premium vodka made from sugarcane, with a clean, harmonious profile and an exquisitely smooth finish. Gluten free. Distilled using responsible methods.</p>
+          <div class="tags" role="list" aria-label="Features">
+            <span class="tag" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm5 11H7a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2Z"/></svg>
+              Gluten free
+            </span>
+            <span class="tag" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22A10 10 0 1 1 22 12 10.011 10.011 0 0 1 12 22Zm1-15h-2v6h6v-2h-4Z"/></svg>
+              Distilled four times
+            </span>
+            <span class="tag" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16v2H4zm2 4h12l-1 12a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3L6 7z"/></svg>
+              40% Alc./Vol. (80 proof)
+            </span>
+            <span class="tag" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10v2H7zM5 6h14v2H5zm-2 4h18v2H3zm2 4h14v2H5zm2 4h10v2H7z"/></svg>
+              700 ml
+            </span>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="#historia">Learn more</a>
+            <a class="btn btn-ghost" href="#comprar">Find us</a>
+          </div>
+          <div class="motif" aria-hidden="true">
+            <svg viewBox="0 0 200 360" fill="none">
+              <path d="M40 340c40-80 40-160 0-240 60 50 100 110 60 220 40-70 60-160-40-260" stroke="currentColor" stroke-width="6"/>
+            </svg>
+          </div>
+        </div>
+        <img class="bottle" src="bottle.jpeg" alt="CANECRAFT Vodka bottle" title="CANECRAFT Vodka" />
+      </div>
+    </section>
+
+    <section id="caracteristicas">
+      <div class="container">
+        <div class="grid cols-3">
+          <div class="feature">
+            <h3>Profile</h3>
+            <p>Rich and harmonious, exceptional viscosity, and a <em>smooth</em> finish. Perfect for fine mixology or to sip neat and cold.</p>
+          </div>
+          <div class="feature">
+            <h3>Raw material</h3>
+            <p>Crafted from sugarcane grown in the Dominican Republic, honoring sustainable practices from field to bottle.</p>
+          </div>
+          <div class="feature">
+            <h3>Commitment</h3>
+            <p>Natural ingredients, gluten free, and a process focused on precision and purity in every distillation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <div class="container">
+        <div class="panel">
+          <h2>Our story</h2>
+          <p><strong>Distilled from Dominican Sugar Cane.</strong></p>
+          <p>CaneCraft, a groundbreaking gluten‑free vodka crafted from sugar cane from the Caribbean island of the Dominican Republic. Utilizing sustainable methods, we blend the finest all‑natural sugar‑free ingredients to create a truly sophisticated experience.</p>
+          <p>Our journey begins in the fertile lands of <strong>San Pedro de Macorís Province</strong>, renowned for its untouched soil and abundant resources. The pristine rivers flowing through the region nourish our cane plants for an impressive <strong>12–14 months</strong>, ensuring unparalleled quality.</p>
+          <p>With CaneCraft, you will indulge in a rich, harmonious flavor profile that boasts viscosity and an exquisitely smooth finish. Join us as we redefine elegance in every cocktail.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="origen">
+      <div class="container">
+        <div class="grid cols-2">
+          <div class="panel">
+            <h2>Origin and process</h2>
+            <p>Born in San Pedro de Macorís, D.R. Our cane is nourished by pristine river waters and harvested at peak maturity. The mash is fermented at low temperature to preserve aromatic purity, then distilled four times to achieve a silky texture.</p>
+            <p class="seal">Made in the Dominican Republic</p>
+          </div>
+          <div class="panel">
+            <h2>Traceability</h2>
+            <ul>
+              <li><strong>Batch No.:</strong> see batch number on the bottle</li>
+              <li><strong>Sanitary Registration (D.R.):</strong> —</li>
+              <li><strong>Industrial Registration:</strong> RI-RD-12-00400</li>
+              <li><strong>Liquor License No.:</strong> LICO-ZF-002</li>
+            </ul>
+            <p style="margin-top:10px"><span class="stamp">40% Alc./Vol. · 700 ml</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legales">
+      <div class="container">
+        <div class="panel">
+          <h2>Legal information</h2>
+          <p><strong>Alcohol consumption is harmful to health (Law 42‑01).</strong> Store away from direct sunlight and extreme heat.</p>
+          <p><strong>Produced by:</strong> Yazoo Investments, SRL. Zona Franca Industrial San Pedro de Macorís, Manzana 2‑B, San Pedro de Macorís, Dominican Republic.</p>
+          <p><strong>For:</strong> T &amp; A H Craft Spirits, LLC, New York, NY 10029.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="comprar">
+      <div class="container">
+        <div class="panel" style="text-align:center">
+          <h2>Where to buy?</h2>
+          <p>Coming soon to authorized distributors and select bars. In the meantime, contact us for wholesale and licensing.</p>
+          <div style="display:flex; gap:12px; justify-content:center; margin-top:12px">
+            <a class="btn btn-primary" href="mailto:sales@canecraft.example">Write to sales</a>
+            <a class="btn btn-ghost" href="#">Download spec sheet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="grid cols-2" style="align-items:center">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:700">CANECRAFT</div>
+          <div style="opacity:.8">© <span id="y"></span> CANECRAFT. All rights reserved.</div>
+        </div>
+        <div style="justify-self:end; display:flex; gap:18px; flex-wrap:wrap">
+          <a href="#legales">Legal</a>
+          <a href="#historia">Story</a>
+          <a href="#comprar">Distribution</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "CANECRAFT Gluten‑Free Vodka",
+    "brand": {"@type":"Brand","name":"CANECRAFT"},
+    "description": "Premium sugarcane vodka. Gluten free, distilled four times in the Dominican Republic.",
+    "additionalProperty": [
+      {"@type":"PropertyValue","name":"Alcohol by volume","value":"40%"},
+      {"@type":"PropertyValue","name":"Net content","value":"700 ml"}
+    ],
+    "isConsumableForChildren": false,
+    "countryOfOrigin": "DO"
+  }
+  </script>
+</body>
+</html>
