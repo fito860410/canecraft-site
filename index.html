@@ -8,7 +8,7 @@
   <meta property="og:title" content="CANECRAFT Vodka — Gluten Free" />
   <meta property="og:description" content="Gluten‑free premium vodka, distilled four times in the Dominican Republic." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="bottle.jpeg" />
   <meta name="theme-color" content="#1f5c2e" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,18 +42,18 @@
     .brand .word{font-family:"Cormorant Garamond", Garamond, "Times New Roman", serif; letter-spacing:1px; font-weight:700; font-size:26px}
     .badge{border:2px solid var(--brand-green); padding:3px 8px; border-radius:999px; font-size:12px; color:var(--brand-green); background:linear-gradient(180deg, #fff 0%, #f9f6ec 100%)}
 
-    .btn{appearance:none; border:none; cursor:pointer; border-radius:999px; padding:12px 18px; font-weight:600}
+    .btn{appearance:none; border:none; cursor:pointer; text-decoration:none; display:inline-block; border-radius:999px; padding:12px 18px; font-weight:600; transition: background .2s}
     .btn-primary{background:var(--brand-green); color:var(--cream); box-shadow:var(--shadow)}
     .btn-primary:hover{background:var(--brand-green-2)}
     .btn-ghost{background:transparent; color:var(--brand-green); border:1px solid color-mix(in hsl, var(--brand-green) 30%, transparent)}
+    .btn-ghost:hover{background:rgba(31,92,46,0.05)}
 
     .hero{position:relative; isolation:isolate; padding:84px 0 72px; overflow:hidden}
     .hero::before{
       content:""; position:absolute; inset:-20% -10% auto -10%; height:120%; z-index:-1;
       background:
         radial-gradient(1200px 600px at 80% 20%, rgba(31,92,46,.09), transparent 60%),
-        linear-gradient(180deg, #f4efe0 0%, #fbf8ee 35%, #ffffff 100%),
-        url('') center/cover no-repeat; /* replace with photo if needed */
+        linear-gradient(180deg, #f4efe0 0%, #fbf8ee 35%, #ffffff 100%);
     }
     .hero .inner{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center}
     .card{background:linear-gradient(180deg, #fff 0%, #faf7ee 100%); border:1px solid color-mix(in hsl, var(--brand-gold) 55%, transparent); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px}
@@ -77,6 +77,7 @@
     .grid{display:grid; gap:22px}
     .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
     .grid.cols-2{grid-template-columns:repeat(2, 1fr)}
+    
     @media (max-width: 900px){
       .hero .inner{grid-template-columns:1fr}
       .grid.cols-3, .grid.cols-2{grid-template-columns:1fr}
@@ -90,8 +91,42 @@
 
     .stamp{display:inline-block; padding:8px 10px; border:2px solid var(--brand-green); color:var(--brand-green); border-radius:10px; font-family:"Cormorant Garamond", serif; font-weight:700; letter-spacing:.04em; background:linear-gradient(180deg, #fff 0%, #f7f2e5 100%)}
 
+    /* ESTILOS NUEVOS PARA VIDEO Y GALERIA */
+    .video-wrapper {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 4px solid #fff;
+        background: #000;
+        aspect-ratio: 16 / 9;
+        position: relative;
+    }
+    .video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gallery-item {
+        border-radius: var(--radius);
+        overflow: hidden;
+        height: 300px;
+        border: 1px solid color-mix(in hsl, var(--brand-gold) 30%, transparent);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
     footer{background:var(--brand-green); color:var(--cream); padding:36px 0}
-    footer a{color:var(--brand-gold)}
+    footer a{color:var(--brand-gold); text-decoration: none}
 
     /* tiny cane motif */
     .motif{position:absolute; inset:auto -60px -60px auto; width:220px; opacity:.08}
@@ -111,7 +146,7 @@
         </div>
         <div style="display:flex; gap:10px">
           <a class="btn btn-ghost" href="#historia">Story</a>
-          <a class="btn btn-ghost" href="#origen">Origin</a>
+          <a class="btn btn-ghost" href="#experience">Gallery</a>
           <a class="btn btn-primary" href="#comprar">Where to buy</a>
         </div>
       </nav>
@@ -132,11 +167,11 @@
             </span>
             <span class="tag" role="listitem">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22A10 10 0 1 1 22 12 10.011 10.011 0 0 1 12 22Zm1-15h-2v6h6v-2h-4Z"/></svg>
-              Distilled four times
+              Distilled 4x
             </span>
             <span class="tag" role="listitem">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3h16v2H4zm2 4h12l-1 12a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3L6 7z"/></svg>
-              40% Alc./Vol. (80 proof)
+              40% Alc./Vol.
             </span>
             <span class="tag" role="listitem">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10v2H7zM5 6h14v2H5zm-2 4h18v2H3zm2 4h14v2H5zm2 4h10v2H7z"/></svg>
@@ -176,6 +211,23 @@
       </div>
     </section>
 
+    <section id="the-craft" style="padding-top:0">
+        <div class="container">
+            <div class="panel">
+                <div style="text-align:center; margin-bottom:24px">
+                    <h2>The Craft in Motion</h2>
+                    <p>A glimpse into our process in San Pedro de Macorís.</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls poster="1.jpeg" playsinline>
+                        <source src="WhatsApp%20Video%202026-01-09%20at%2008.13.50.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="historia">
       <div class="container">
         <div class="panel">
@@ -186,6 +238,23 @@
           <p>With CaneCraft, you will indulge in a rich, harmonious flavor profile that boasts viscosity and an exquisitely smooth finish. Join us as we redefine elegance in every cocktail.</p>
         </div>
       </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:30px">Visual Experience</h2>
+            <div class="grid cols-3">
+                <div class="gallery-item">
+                    <img src="1.jpeg" alt="Canecraft Process Details" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpeg" alt="Canecraft Lifestyle" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpeg" alt="Canecraft Texture" loading="lazy">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="origen">
@@ -256,7 +325,6 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Structured data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
